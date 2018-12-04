@@ -1,0 +1,27 @@
+/* line 1, ../sass/ripple.scss */
+.fk_ripple {
+  position: absolute;
+  background-color: #fff;
+    /**
+    OR for the same color of parent
+    background-color: currentColor;
+
+    **/
+  opacity: .1;
+  animation: fill .9s;
+  display: block;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+@keyframes fill {
+  0% {
+    transform: scale(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2);
+    opacity: .1;
+  }
+}
